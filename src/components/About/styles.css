@@ -1,0 +1,18 @@
+.about-section {
+    padding: 50px;
+}
+
+.service-details {
+    padding: 30px;
+}
+
+.service-title {
+    color: #64C433;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.service-description {
+    font-size: 18px;
+    text-align: justify;
+}

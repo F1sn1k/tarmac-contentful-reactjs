@@ -20,7 +20,8 @@ class Team extends Component {
 
     getContent = () => {
         const employee_list = []
-        client.getEntries().then(entries => {
+        client.getEntries({content_type: "team"})
+        .then(entries => {
             entries.items.forEach(entry => {
                 employee_list.push(entry.fields)
                 this.setState({employees: employee_list})
@@ -38,9 +39,15 @@ class Team extends Component {
             <div className="team-section">
                 <Container className="team-ctn">
                     <Row>
-                        { employees.map((employee) => {
+                        <h1>Team</h1>
+                    </Row>
+                    <Row>
+                        <h3>We have fun together and with our clients.</h3>
+                    </Row>
+                    <Row>
+                        { employees.map(function(employee, i) {
                             return (
-                                <Col xs="4" className="team-details" >
+                                <Col xs="3" className="team-details" key={i}>
                                     <Card>
                                         <CardImg top width="100%" src={employee.photo.fields.file.url} alt="Card image cap" />
                                         <CardBody>
@@ -54,7 +61,12 @@ class Team extends Component {
                             )
                         })}
                     </Row>
-            
+                    <Row>
+                        <h1>We are changing the perception of offshore development</h1>
+                    </Row>
+                    <Row>
+                        <h5>We are a web and mobile development shop out of Minneapolis, Minnesota; Montevideo, Uruguay; and Skopje, Macedonia that is committed to changing the perception of offshore development one client at a time.</h5>
+                    </Row>
                 </Container>
             </div>
     )}
