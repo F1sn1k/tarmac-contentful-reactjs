@@ -6,7 +6,7 @@ import logo from './logo.png';
 class Header extends Component {
     render() {
         return (
-            <div className="header-section">
+            <div className="navbar fixed-top">
                 <Container className="header-ctn">
                     <Row>
                         <Col style={{ textAlign: 'left'}}>

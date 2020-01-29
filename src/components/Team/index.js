@@ -58,7 +58,6 @@ class Team extends Component {
                                             <CardTitle>{employee.fullName}</CardTitle>
                                             <CardSubtitle>{employee.position}</CardSubtitle>
                                             <CardText>{employee.location}</CardText>
-                                        {/* <Button>Button</Button> */}
                                         </CardBody>
                                     </Card>           
                                 </Col>
