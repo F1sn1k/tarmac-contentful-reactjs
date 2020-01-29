@@ -1,0 +1,24 @@
+
+
+.testimonials-ctn {
+   width: 100%;
+}
+
+.Contact-form-box {
+   padding:20px;
+}
+
+.Login-input {
+  height: 70px;
+  border-radius: 4px;
+  font-size: 17px;
+  padding: 15px 25px;
+  letter-spacing: 0.4px;
+}
+
+.Submit-btn {
+   height: 80px;
+   letter-spacing: 0.4px;
+   background-color: rgb(255, 129, 63);
+   border-color: rgb(255, 129, 63);
+}

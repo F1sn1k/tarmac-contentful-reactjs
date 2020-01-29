@@ -1,0 +1,17 @@
+.logo-company {
+    width: 250px;
+    padding: 20px;
+}
+
+.navbar {
+    background: #fff;
+    padding: 10px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
