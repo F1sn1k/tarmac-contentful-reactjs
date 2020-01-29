@@ -37,22 +37,23 @@ class Contact extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <Form onSubmit={this.handleSubmit}>
+                        <Col className="Contact-form-box" align="center">
+                            <Form onSubmit={this.handleSubmit}>      
                                 <FormGroup className="col-4">
-                                    <Label for="name"></Label>
-                                    <Input type="text" name="first_name" id="name" placeholder="Enter your name"></Input>
+                                    <Label for="name">Full Name</Label>
+                                    <Input type="text" name="first_name" id="name" placeholder="Enter your name" className="Login-input" />
                                 </FormGroup>
                                 <FormGroup className="col-4">
-                                    <Label for="email"></Label>
-                                    <Input type="text" name="email" id="email" placeholder="Enter your email"></Input>
+                                    <Label for="email">Email</Label>
+                                    <Input type="text" name="email" id="email" placeholder="Enter your email" className="Login-input" />
                                 </FormGroup>
+                            
                                 <FormGroup className="col-4">
-                                    <Label for="description"></Label>
-                                    <Input type="description" name="description" id="email" placeholder="Enter your description"></Input>
+                                    <Label for="description">Description</Label>
+                                    <Input type="textarea" name="description" id="email" placeholder="Enter your description" className="Login-input" />
                                 </FormGroup>
-                                <FormGroup className="cmp-btn">
-                                    <Button className="complain-button">Submit</Button>
+                                <FormGroup>
+                                    <Button size="lg" className="Submit-btn">Submit</Button>
                                 </FormGroup>
                             </Form>
                         </Col>
