@@ -25,7 +25,6 @@ class Clients extends Component {
         const clients_list = []
         client.getEntries({content_type: "clients"}).then(entries => {
             entries.items.forEach(entry => {
-                console.log("ENTRY", entry.fields)
                 clients_list.push(entry.fields)          
                 this.setState({clients: clients_list})
             })

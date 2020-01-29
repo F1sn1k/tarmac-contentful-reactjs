@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { 
-    Container, 
-    Row, 
-    Col
-} from 'reactstrap';
+import { Carousel } from 'react-responsive-carousel';
+import { Container, Row, Col} from 'reactstrap';
 import "./styles.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import * as contentful from 'contentful';
 
 var client = contentful.createClient({
@@ -12,9 +10,19 @@ var client = contentful.createClient({
     accessToken: 'jS0vLmCm8UM_DexDUqhEHFot0aJw00PsOL9uslYS4aU'
 })
 
+let styles = {
+    margin: 'auto',
+    width: '800px',
+
+  };
+ 
 class Testimonials extends Component {
-    state = {
-        testimonials: []
+    constructor(props) {
+        super(props);
+
+        this.state = {
+          testimonials: []
+        };
     }
 
     componentDidMount() {
@@ -25,7 +33,6 @@ class Testimonials extends Component {
         const testiomonials_list = []
         client.getEntries({content_type: "portfolio"}).then(entries => {
             entries.items.forEach(entry => {
-                // console.log("ENTRY", entry.fields)
                 testiomonials_list.push(entry.fields)          
                 this.setState({testimonials: testiomonials_list})
             })
@@ -42,13 +49,37 @@ class Testimonials extends Component {
             <div className="testimonials-section">
                 <Container className="testimonials-ctn">
                     <Row>
-                        <Col>
-                            <h1>Testimonials</h1>
-                        </Col>
+                        <Col><h1 className="white-title">Testimonials</h1></Col>
+                    </Row>
+                    <Row>
+                        <div style={styles}>
+                            <Carousel
+                                showThumbs={false}
+                                showStatus={false}
+                                useKeyboardArrows
+                                className="presentation-mode"
+                            >
+                            {testimonials.map(function(testimonial, i) {
+                                return (
+                                    <div className="my-slide content">
+                                        <div>
+                                            <img className="testimonials-image" src={testimonial.image.fields.file.url} alt="" />
+                                        </div>
+                                        <p style={{ margin: '40px'}}>
+                                            {testimonial.description}
+                                        </p>
+                                        <blockquote>
+                                            <strong>{testimonial.person}</strong>, {testimonial.position}
+                                        </blockquote>
+                                    </div>
+                                )
+                            })}
+                            </Carousel>
+                        </div>
                     </Row>
                 </Container>
             </div>
-    )}
+    )}  
 }
 
 export default Testimonials;

@@ -38,7 +38,9 @@ class About extends Component {
             <div className="about-section">
                 <Container className="section-ctn">
                     <Row>
-                        <h1>Design, Build, Scale & Support.</h1>
+                        <Col>
+                            <h1>Design, Build, Scale & Support.</h1>
+                        </Col>
                     </Row>
                     <Row>
                         { services.map(function(service, i) {

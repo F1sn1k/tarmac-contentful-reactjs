@@ -33,7 +33,7 @@ class Contact extends Component {
                 <Container className="testimonials-ctn">
                     <Row>
                         <Col>
-                            <h1>Contact Tarmac</h1>
+                            <h1 className="white-title">Contact Tarmac</h1>
                         </Col>
                     </Row>
                     <Row>
@@ -47,10 +47,9 @@ class Contact extends Component {
                                     <Label for="email">Email</Label>
                                     <Input type="text" name="email" id="email" placeholder="Enter your email" className="Login-input" />
                                 </FormGroup>
-                            
                                 <FormGroup className="col-4">
                                     <Label for="description">Description</Label>
-                                    <Input type="textarea" name="description" id="email" placeholder="Enter your description" className="Login-input" />
+                                    <Input type="textarea" name="description" id="description" placeholder="Enter your description" className="Login-input" />
                                 </FormGroup>
                                 <FormGroup>
                                     <Button size="lg" className="Submit-btn">Submit</Button>

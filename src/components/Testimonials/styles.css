@@ -1,3 +1,16 @@
 .testimonials-section {
     background-color: #FFA07A;
 }
+
+.carousel .slide {
+    background-color: #FFA07A !important;
+}
+
+.carousel .slide img {
+    margin: 20px !important;
+    width: 120px !important;
+}
+
+.testimonials-image {
+    border-radius: 50%;
+}

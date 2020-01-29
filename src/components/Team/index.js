@@ -39,12 +39,16 @@ class Team extends Component {
             <div className="team-section">
                 <Container className="team-ctn">
                     <Row>
-                        <h1>Team</h1>
+                        <Col>
+                            <h1>Team</h1>
+                        </Col>
                     </Row>
                     <Row>
-                        <h3>We have fun together and with our clients.</h3>
+                        <Col>
+                            <h3>We have fun together and with our clients.</h3>
+                        </Col>
                     </Row>
-                    <Row>
+                    <Row style={{ margin: '20px', textAlign: 'center'}}>
                         { employees.map(function(employee, i) {
                             return (
                                 <Col xs="3" className="team-details" key={i}>
@@ -62,10 +66,14 @@ class Team extends Component {
                         })}
                     </Row>
                     <Row>
-                        <h1>We are changing the perception of offshore development</h1>
+                        <Col>
+                            <h2>We are changing the perception of offshore development</h2>
+                        </Col>
                     </Row>
                     <Row>
-                        <h5>We are a web and mobile development shop out of Minneapolis, Minnesota; Montevideo, Uruguay; and Skopje, Macedonia that is committed to changing the perception of offshore development one client at a time.</h5>
+                        <Col>
+                            <p>We are a web and mobile development shop out of Minneapolis, Minnesota; Montevideo, Uruguay; and Skopje, Macedonia that is committed to changing the perception of offshore development one client at a time.</p>
+                        </Col>
                     </Row>
                 </Container>
             </div>
