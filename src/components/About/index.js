@@ -7,7 +7,6 @@ var client = contentful.createClient({
     space: '0w8u6uuma4ys',
     accessToken: 'jS0vLmCm8UM_DexDUqhEHFot0aJw00PsOL9uslYS4aU'
 })
-
 class About extends Component {
     state = {
         services: []
@@ -21,7 +20,7 @@ class About extends Component {
         const service_list = []
         client.getEntries({content_type: "about"}).then(entries => {
             entries.items.forEach(entry => {
-                service_list.push(entry.fields)          
+                service_list.push(entry.fields)
                 this.setState({services: service_list})
             })
 
@@ -31,7 +30,7 @@ class About extends Component {
             console.error(error)
         })
     }
-    
+
     render() {
         const { services } = this.state;
         return (
@@ -46,8 +45,8 @@ class About extends Component {
                         { services.map(function(service, i) {
                             return (
                                 <Col xs="6" className="service-details" key={i}>
-                                    <div className="service-title">{service.serviceTitle}</div>      
-                                    <div className="service-description">{service.serviceDescription}</div>   
+                                    <div className="service-title">{service.serviceTitle}</div>
+                                    <div className="service-description">{service.serviceDescription}</div>
                                 </Col>
                             )
                         })}
